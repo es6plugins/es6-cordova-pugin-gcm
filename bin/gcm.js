@@ -9,11 +9,11 @@ var onNotification = function (notification) {
 export default function (senderId, uuid, callback) {
     if (window.GcmPushPlugin !== undefined) {
         window.GcmPushPlugin.register(function (result) {
-            let params = {};
-            let update = {
+            var params = {};
+            var update = {
                 token: result.gcm
             };
-            let query = {
+            var query = {
                 deviceId: uuid,
                 deviceType: 'android'
             };
