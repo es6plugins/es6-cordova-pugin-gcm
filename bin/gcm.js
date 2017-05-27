@@ -18,6 +18,7 @@ export default function (senderId, uuid, callback) {
                 deviceType: 'android'
             };
             params.query = JSON.stringify(query);
+            params.update = JSON.stringify(update);
             console.log(result.gcm);
             if (callback) {
                 callback(params);
