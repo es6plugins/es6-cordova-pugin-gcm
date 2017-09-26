@@ -1,7 +1,7 @@
 /**
  * Created by hyq on 2016/7/14.
  */
-var onNotice = (notification) => {
+var onNotice = function(notification) {
     console.log('Event Received: ' + notification);
 }
 export default function(senderId, callback) {
@@ -13,7 +13,7 @@ export default function(senderId, callback) {
             var params = {
                 token: result.gcm
             };
-            console.log(result.gcm);
+            console.log('%o', result);
             if (callback) {
                 callback(params);
             } else {
