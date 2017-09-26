@@ -1,35 +1,26 @@
 /**
  * Created by hyq on 2016/7/14.
  */
-
-var onNotification = function (notification) {
+var onNotice = (notification) => {
     console.log('Event Received: ' + notification);
-};
-
-export default function (senderId, uuid, callback) {
+}
+export default function(senderId, callback) {
     if (window.GcmPushPlugin !== undefined) {
-        window.GcmPushPlugin.register(function (result) {
-            var params = {};
-            var update = {
+        window.GcmPushPlugin.register({
+            'senderId': senderId,
+            'jsCallback': 'onNotice'
+        }, function(result) {
+            var params = {
                 token: result.gcm
             };
-            var query = {
-                deviceId: uuid,
-                deviceType: 'android'
-            };
-            params.query = JSON.stringify(query);
-            params.update = JSON.stringify(update);
             console.log(result.gcm);
             if (callback) {
                 callback(params);
-            }else {
+            } else {
                 return Promise.resolve(params);
             }
-        }, function (error) {
+        }, function(error) {
             console.log('Error: ' + error);
-        }, {
-            'senderId': senderId,
-            'jsCallback': 'onNotification'
         });
     }
 };
