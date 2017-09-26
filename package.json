@@ -1,19 +1,19 @@
 {
-  "name": "es6-cordova-pugin-gcm",
-  "version": "1.0.2",
-  "description": "",
-  "main": "./bin/gcm.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/es6plugins/es6-cordova-pugin-gcm.git"
-  },
-  "author": "shanyin-haiwai-fegroup",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/es6plugins/es6-cordova-pugin-gcm/issues"
-  },
-  "homepage": "https://github.com/es6plugins/es6-cordova-pugin-gcm#readme"
+    "name": "es6-cordova-pugin-gcm",
+    "version": "1.0.3",
+    "description": "",
+    "main": "./bin/gcm.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/es6plugins/es6-cordova-pugin-gcm.git"
+    },
+    "author": "shanyin-haiwai-fegroup",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/es6plugins/es6-cordova-pugin-gcm/issues"
+    },
+    "homepage": "https://github.com/es6plugins/es6-cordova-pugin-gcm#readme"
 }
